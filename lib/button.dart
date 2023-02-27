@@ -5,6 +5,7 @@ class CustomButton extends StatelessWidget {
   final Widget child;
   final double fontSize;
   final double padding;
+  var fontColor;
   var color;
   var styles;
   CustomButton(
@@ -12,6 +13,7 @@ class CustomButton extends StatelessWidget {
       required this.child,
       required this.fontSize,
       required this.color,
+      required this.fontColor,
       required this.padding,
       required this.styles});
 
@@ -23,7 +25,7 @@ class CustomButton extends StatelessWidget {
         padding: EdgeInsets.all(padding),
         backgroundColor: color,
         elevation: 9.0,
-        textStyle: TextStyle(fontSize: fontSize),
+        textStyle: TextStyle(fontSize: fontSize, color: fontColor),
       ),
       child: child,
     );
